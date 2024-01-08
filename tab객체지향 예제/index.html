@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab메뉴</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="tab_class.js"></script>
+    <script>
+        window.onload = ()=>{
+            new MyTab("#tab"); 
+        }
+    </script>
+</head>
+<body>
+    <section id="tab">
+        <ul>
+            <li class="on"><a href="#">button1</a></li>
+            <li><a href="#">button2</a></li>
+            <li><a href="#">button3</a></li>
+        </ul>
+
+        <article>
+            <div class="on">Tab1</div>
+            <div>Tab2</div>
+            <div>Tab3</div>
+        </article>
+    </section>
+</body>
+</html>

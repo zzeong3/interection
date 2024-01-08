@@ -1,0 +1,82 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#slider {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin: 100px auto;
+}
+#slider ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+}
+#slider ul li {
+  width: 20%;
+  height: 100%;
+  float: left;
+  font-size: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+      nth-of-type은 li의 순서에 따라서 속성을 적용하는 것이기 때문에 loop slider의 경우처럼 li의 순서가 바뀌는 경우에는 적용할 수 없다.
+
+      data- ex) data-index,data-grid
+      HTML5 부터 데이터 속성이라는 개념이 생김
+      일부 js에서 적용이 안됨
+
+      데이터 속성은 'data-'로 시작하고, 브라우저가 이런 데이터 속성에는 어떤 행동에도 관여하지 않는다.
+
+      개발자가 특수한 값을 몰래 저장하는 용도로 쓰인다.
+      hidden 클래스르 부여하지 않고도 데이터를 저장할 수 있게 되었다.
+  */
+}
+#slider ul li[data-index="1"] {
+  background: aqua;
+}
+#slider ul li[data-index="2"] {
+  background: hotpink;
+}
+#slider ul li[data-index="3"] {
+  background: orange;
+}
+#slider ul li[data-index="4"] {
+  background: purple;
+}
+#slider ul li[data-index="5"] {
+  background: red;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -50px;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  margin-top: -50px;
+}
+
+/*# sourceMappingURL=style.css.map */

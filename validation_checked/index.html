@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="inputBox">
+            <input type="password" name="" id="pwd" onkeyup="checkPassword(this.value)" placeholder="password">
+            <span id="toggleBtn"></span>
+        </div>
+        <div class="validation">
+            <ul>
+                <li id="lower">최소 한글자 이상의 영문 소문자</li>
+                <li id="upper">최소 한글자 이상의 영문 대문자</li>
+                <li id="number">최소 한글자 이상의 숫자</li>
+                <li id="special">최소 한글자 이상의 특수문자</li>
+                <li id="length">비밀번호 전체길이는 최소 8글자 이상</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

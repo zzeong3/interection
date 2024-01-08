@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  position: absolute;
+  top: -99999px;
+  opacity: 0;
+}
+
+body {
+  background: #323232;
+}
+
+.gallery {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery button {
+  width: 55px;
+  height: 55px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 10;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+}
+.gallery button i {
+  font-size: 25px;
+}
+.gallery.on button {
+  transform: rotate(45deg);
+}
+.gallery div {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: "Open Sans";
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s 0.4s;
+}
+.gallery div strong {
+  display: block;
+  font-size: 32px;
+  color: #693a2a;
+}
+.gallery.on div {
+  opacity: 1;
+  z-index: 11;
+}
+.gallery::before, .gallery::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  transform: scale(0);
+}
+.gallery::before {
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.gallery::after {
+  background: #e6714a;
+  transition: 0.5s 0.2s;
+}
+.gallery.on::before, .gallery.on::after {
+  transform: scale(25);
+}
+
+/*# sourceMappingURL=style.css.map */
